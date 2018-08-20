@@ -9,9 +9,9 @@ public class P26RemoveDuplicatesFromSortedArray {
 
         int index=0;
         for(int i=1;i<nums.length;i++){
-            if(a[index]!=a[i]){
+            if(nums[index]!=nums[i]){
                 index++;
-                a[index]=a[i];
+                nums[index]=nums[i];
             }
         }
        
