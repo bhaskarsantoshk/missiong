@@ -8,10 +8,10 @@ public class P268MissingNumber {
             x^=nums[i];
         }
 
-        for(int i=0;i<=n;i++){
+        for(int i=0;i<=nums.length;i++){
             x^=i;
         }
 
-        return x
+        return x;
     }
 }
