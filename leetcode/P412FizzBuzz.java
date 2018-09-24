@@ -24,4 +24,4 @@ public class P412FizzBuzz {
         return list;
     }
 }
-}
+
