@@ -22,18 +22,15 @@ public class NearestMultipleOf10 {
                 int[] result = addNumToArray(a,10-a[a.length-1]);
                 printArray(result);
             }
-
             t--;
         }
     }
-
     static void printArray(int[] a){
         for(int i=0;i<a.length;i++){
             System.out.print(a[i]);
         }
         System.out.println();
     }
-
     static int[] addNumToArray(int[] a, int x){
         int i=a.length-1;
         int carry =x;
