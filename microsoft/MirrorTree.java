@@ -13,7 +13,6 @@ public class MirrorTree {
             left = right = null;
         }
     }
-
     void mirror(Node node)
     {
         if( node == null ){
@@ -21,10 +20,8 @@ public class MirrorTree {
         }
         mirror(node.left);
         mirror(node.right);
-
         Node temp=node.left;
         node.left = node.right;
         node.right = temp;
     }
-
 }
