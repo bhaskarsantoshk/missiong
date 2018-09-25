@@ -19,11 +19,9 @@ public class ClosestNumber {
             int q = n/m;
             int x = q* m;
             int y = (q+1) * m;
-
             int dx = Math.abs(x-n);
             int dy = Math.abs(y-n);
             int res = 0;
-
             if(dx == dy){
                 res = Math.max(Math.abs(x),Math.abs(y));
             }
@@ -33,9 +31,7 @@ public class ClosestNumber {
             else{
                 res = x;
             }
-
             System.out.println(sign*res);
-
             t--;
         }
     }
