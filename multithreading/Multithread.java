@@ -12,6 +12,7 @@ class MultiThreadingDemo extends  Thread{
     }
 }
 
+
 class MultiThreadingDemo2 implements Runnable{
     public void run()
     {
@@ -41,7 +42,9 @@ public class Multithread{
             //Thread obj2 = new MultiThreadingDemo(); //Works
             //Thread obj3 = new Thread(); //works but do not print anything
             //Thread obj4 = new MultiThreadingDemo2(); //Compiler error - Incompatible Types
-            Thread obj5 = new Thread(new MultiThreadingDemo2());
+            //Whole idea of multi threading is to create multiple threads for the same object for parallel execution
+            MultiThreadingDemo2 mt = new MultiThreadingDemo2();
+            Thread obj5 = new Thread(mt);
             obj5.start();
         }
     }
@@ -51,7 +54,7 @@ public class Multithread{
 /*
 Thread Class vs Runnable Interface
 
-1. If we extend the Thread class, 
+1. If we extend the Thread class,
 our class cannot extend any other class because Java doesn’t support multiple inheritance.
 But, if we implement the Runnable interface, our class can still extend other base classes.
 
