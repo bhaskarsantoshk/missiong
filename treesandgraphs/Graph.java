@@ -1,189 +1,243 @@
-package com.course2;
+package treesandgraphs;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Stack;
 
-public class Graph {
-    // Rather than making an algorithm to reverse vertices, each graph maintains both
-    // the normal and reverse versions of itself.
-    private Map<Integer, Vertex> vertices;
-    private Map<Integer, Vertex> reversedVertices;
+public class Graph<T>{
 
-    // List of the number of nodes found in each SCC
-    List<Integer> sccSizes;
+    private List<Edge<T>> allEdges;
+    private Map<Long,Vertex<T>> allVertex;
+    boolean isDirected = false;
 
-    // Variable to hold the running size of the current SCC
-    int components;
-
-    // List of vertices in the order they complete in a DFS pass on the reversed graph G
-    Stack<Vertex> finishingTimes;
-
-
-    /**
-     *
-     * @param vertices
-     */
-    public Graph(Map<Integer,Vertex> vertices, Map<Integer,Vertex> reversedVertices) {
-        this.vertices = vertices;
-        this.reversedVertices = reversedVertices;
-        sccSizes = new ArrayList<Integer>();
-        finishingTimes = new Stack<Vertex>();
+    public Graph(boolean isDirected){
+        allEdges = new ArrayList<Edge<T>>();
+        allVertex = new HashMap<Long,Vertex<T>>();
+        this.isDirected = isDirected;
     }
 
-    /**
-     *  Constructs a graph directly from a text file (format specified in assignment)
-     *
-     * @param filePath a string with the full filePath with digraph representation (see assignment for spec)
-     * @throws IOException
-     */
-    public Graph(String filePath) throws IOException {
-        // Both normal and reversed graphs will be constructed
-        Map<Integer, Vertex> vertices = new HashMap<Integer, Vertex>();
-        Map<Integer, Vertex> reversedVertices = new HashMap<Integer, Vertex>();
+    public void addEdge(long id1, long id2){
+        addEdge(id1,id2,0);
+    }
 
-        // Open necessary objects to read file contents
-        FileReader fileReader = new FileReader(filePath);
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-        String line = bufferedReader.readLine();
-
-        while(line != null) {
-            // Split each line into head and tail
-            String[] edge = line.split(" ");
-            int head = Integer.parseInt(edge[0]);
-            int tail = Integer.parseInt(edge[1]);
-
-            // In the reversed graph, the head and tail are switched
-            int headReversed = Integer.parseInt(edge[1]);
-            int tailReversed = Integer.parseInt(edge[0]);
-
-            // For both head and tail in normal and reversed graphs, if head or tail is not already a vertex
-            // add it to the graph.
-            if(!vertices.containsKey(head)) {
-                Vertex v = new Vertex(head);
-                vertices.put(head, v);
-            }
-            if(!reversedVertices.containsKey(headReversed)) {
-                Vertex vR = new Vertex(headReversed);
-                reversedVertices.put(headReversed, vR);
-            }
-            if(!vertices.containsKey(tail)) {
-                Vertex v2 = new Vertex(tail);
-                vertices.put(tail, v2);
-            }
-            if(!reversedVertices.containsKey(tailReversed)) {
-                Vertex v2R = new Vertex(tailReversed);
-                reversedVertices.put(tailReversed, v2R);
-            }
-
-            //  Add the tail to the list of adjacent nodes for the head (construct the digraph connections)
-            vertices.get(head).addAdjacentNode(vertices.get(tail));
-            reversedVertices.get(headReversed).addAdjacentNode(reversedVertices.get(tailReversed));
-
-            line = bufferedReader.readLine(); // get the next line
+    //This works only for directed graph because for undirected graph we can end up
+    //adding edges two times to allEdges
+    public void addVertex(Vertex<T> vertex){
+        if(allVertex.containsKey(vertex.getId())){
+            return;
         }
-        bufferedReader.close(); // clean up
-
-        // Finally, set the graph
-        this.vertices = vertices;
-        this.reversedVertices = reversedVertices;
-        sccSizes = new ArrayList<Integer>();
-        finishingTimes = new Stack<Vertex>();
-    }
-
-    /**
-     *
-     * @return
-     */
-    public Map<Integer, Vertex> getVertices() {
-        return vertices;
-    }
-
-    /**
-     *
-     * @param visited
-     */
-    public void setAllVisited(boolean visited) {
-        for(Vertex n : this.getVertices().values()) {
-            n.setVisited(false);
+        allVertex.put(vertex.getId(), vertex);
+        for(Edge<T> edge : vertex.getEdges()){
+            allEdges.add(edge);
         }
     }
 
-    public void setReversedGraph(Map<Integer, Vertex> nodesReversed) {
-        this.reversedVertices = nodesReversed;
-    }
-
-    public Map<Integer, Vertex> getReversedVertices() {
-        return this.reversedVertices;
-    }
-
-    public Stack<Vertex> depthFirstSearchLoop() {
-        for(Vertex v : this.getVertices().values()) {
-            if(!v.isVisited()) {
-                depthFirstSearch(v);
-            }
+    public Vertex<T> addSingleVertex(long id){
+        if(allVertex.containsKey(id)){
+            return allVertex.get(id);
         }
-        return this.finishingTimes;
+        Vertex<T> v = new Vertex<T>(id);
+        allVertex.put(id, v);
+        return v;
     }
 
-    public void depthFirstSearchLoop(Stack<Vertex> finishingTimes) {
-        Vertex v;
-        while(!finishingTimes.isEmpty()) {
-            v = finishingTimes.pop();
+    public Vertex<T> getVertex(long id){
+        return allVertex.get(id);
+    }
 
-            // TODO correct bug, fixed, but finishingTimes come in with references to nodes
-            // on reversed graphs. Have to convert to normal graph here
-            v = this.getVertices().get(v.getValue());
-            if(!v.isVisited()) {
-                components = 1;
-                this.depthFirstSearch(v);
-                sccSizes.add(components);
-            }
+    public void addEdge(long id1,long id2, int weight){
+        Vertex<T> vertex1 = null;
+        if(allVertex.containsKey(id1)){
+            vertex1 = allVertex.get(id1);
+        }else{
+            vertex1 = new Vertex<T>(id1);
+            allVertex.put(id1, vertex1);
+        }
+        Vertex<T> vertex2 = null;
+        if(allVertex.containsKey(id2)){
+            vertex2 = allVertex.get(id2);
+        }else{
+            vertex2 = new Vertex<T>(id2);
+            allVertex.put(id2, vertex2);
+        }
+
+        Edge<T> edge = new Edge<T>(vertex1,vertex2,isDirected,weight);
+        allEdges.add(edge);
+        vertex1.addAdjacentVertex(edge, vertex2);
+        if(!isDirected){
+            vertex2.addAdjacentVertex(edge, vertex1);
+        }
+
+    }
+
+    public List<Edge<T>> getAllEdges(){
+        return allEdges;
+    }
+
+    public Collection<Vertex<T>> getAllVertex(){
+        return allVertex.values();
+    }
+    public void setDataForVertex(long id, T data){
+        if(allVertex.containsKey(id)){
+            Vertex<T> vertex = allVertex.get(id);
+            vertex.setData(data);
         }
     }
 
-    /**
-     *
-     * @param g
-     * @param v
-     */
-    public void depthFirstSearch(Vertex v) {
-        v.setVisited(true);
-        for(Vertex adjacentVertex : v.getAdjacentVertices()) {
-            if(!adjacentVertex.isVisited()) {
-                components++;
-                this.depthFirstSearch(adjacentVertex);
-            }
+    @Override
+    public String toString(){
+        StringBuffer buffer = new StringBuffer();
+        for(Edge<T> edge : getAllEdges()){
+            buffer.append(edge.getVertex1() + " " + edge.getVertex2() + " " + edge.getWeight());
+            buffer.append("\n");
         }
-        finishingTimes.push(v);
+        return buffer.toString();
+    }
+}
+
+
+class Vertex<T> {
+    long id;
+    private T data;
+    private List<Edge<T>> edges = new ArrayList<>();
+    private List<Vertex<T>> adjacentVertex = new ArrayList<>();
+
+    Vertex(long id){
+        this.id = id;
     }
 
-    /**
-     * Returns a sorted list (ascending order) with size equal to the number of strongly connected components
-     * (SCCs) in the directed graph (digraph) g. The value of each element is the number of vertices in the
-     * respective SCC.
-     *
-     * @param g
-     * @return
-     */
-    public List<Integer> stronglyConnectedComponents() {
+    public long getId(){
+        return id;
+    }
 
-        Graph gReversed = new Graph(this.reversedVertices, this.vertices);
+    public void setData(T data){
+        this.data = data;
+    }
 
-        Stack<Vertex> finishingTimes = gReversed.depthFirstSearchLoop();
+    public T getData(){
+        return data;
+    }
 
-        gReversed.setAllVisited(false);
-        // This line fixed bug... Should be using a stack, not a queue, which is what unreversed list does
-        this.depthFirstSearchLoop(finishingTimes);
+    public void addAdjacentVertex(Edge<T> e, Vertex<T> v){
+        edges.add(e);
+        adjacentVertex.add(v);
+    }
 
-        Collections.sort(sccSizes);
-        return sccSizes;
+    public String toString(){
+        return String.valueOf(id);
+    }
+
+    public List<Vertex<T>> getAdjacentVertexes(){
+        return adjacentVertex;
+    }
+
+    public List<Edge<T>> getEdges(){
+        return edges;
+    }
+
+    public int getDegree(){
+        return edges.size();
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + (int) (id ^ (id >>> 32));
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Vertex other = (Vertex) obj;
+        if (id != other.id)
+            return false;
+        return true;
+    }
+}
+
+class Edge<T>{
+    private boolean isDirected = false;
+    private Vertex<T> vertex1;
+    private Vertex<T> vertex2;
+    private int weight;
+
+    Edge(Vertex<T> vertex1, Vertex<T> vertex2){
+        this.vertex1 = vertex1;
+        this.vertex2 = vertex2;
+    }
+
+    Edge(Vertex<T> vertex1, Vertex<T> vertex2,boolean isDirected,int weight){
+        this.vertex1 = vertex1;
+        this.vertex2 = vertex2;
+        this.weight = weight;
+        this.isDirected = isDirected;
+    }
+
+    Edge(Vertex<T> vertex1, Vertex<T> vertex2,boolean isDirected){
+        this.vertex1 = vertex1;
+        this.vertex2 = vertex2;
+        this.isDirected = isDirected;
+    }
+
+    Vertex<T> getVertex1(){
+        return vertex1;
+    }
+
+    Vertex<T> getVertex2(){
+        return vertex2;
+    }
+
+    int getWeight(){
+        return weight;
+    }
+
+    public boolean isDirected(){
+        return isDirected;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((vertex1 == null) ? 0 : vertex1.hashCode());
+        result = prime * result + ((vertex2 == null) ? 0 : vertex2.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Edge other = (Edge) obj;
+        if (vertex1 == null) {
+            if (other.vertex1 != null)
+                return false;
+        } else if (!vertex1.equals(other.vertex1))
+            return false;
+        if (vertex2 == null) {
+            if (other.vertex2 != null)
+                return false;
+        } else if (!vertex2.equals(other.vertex2))
+            return false;
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Edge [isDirected=" + isDirected + ", vertex1=" + vertex1
+                + ", vertex2=" + vertex2 + ", weight=" + weight + "]";
     }
 }
