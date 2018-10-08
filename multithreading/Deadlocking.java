@@ -5,12 +5,12 @@ public class Deadlocking {
         try {
             System.out.println(
 "You don't believe in me " +
-        "unless you know me well"
+        "unless you get to know me"
             );
             Thread.currentThread().join();
 
             System.out.println(
-"I won't let you know me well " +
+"I won't let you know me" +
         "unless you start believing in me"
             );
         }
