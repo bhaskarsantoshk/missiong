@@ -1,6 +1,6 @@
 package multithreading;
 
-public class Deadlocking {
+public class Deadlock {
     public static void main(String[] args){
         try {
             System.out.println(
