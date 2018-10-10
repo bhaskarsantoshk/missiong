@@ -6,6 +6,10 @@ public class Node {
     public Node(int d){
         data=d;
     }
+    Node(char d) {
+        data = d;
+        next = null;
+    }
     public Node(){
 
     }
