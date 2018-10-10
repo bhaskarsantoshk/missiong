@@ -1,4 +1,4 @@
-package com.ctci.linkedlists;
+package linkedlists;
 
 public class LoopDetection extends Node{
     static Node head=new Node();
