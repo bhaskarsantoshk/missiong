@@ -1,4 +1,4 @@
-package com.ctci.linkedlists;
+package linkedlists;
 
 public class Node {
     Node next=null;
