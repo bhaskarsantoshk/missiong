@@ -1,4 +1,4 @@
-package com.ctci.linkedlists;
+package linkedlists;
 
 public class DeletingANode extends Node {
     Node deleteNode(Node head, int d){
