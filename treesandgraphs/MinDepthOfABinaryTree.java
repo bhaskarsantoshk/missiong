@@ -2,7 +2,7 @@ package treesandgraphs;
 
 public class MinDepthOfABinaryTree {
 
-    Node root;
+    Node root=null;
         public int minDepthOfABinartTree(Node root){
             if(root==null){
                 return 0;
@@ -23,6 +23,7 @@ public class MinDepthOfABinaryTree {
     public static void main(String args[])
     {
         MinDepthOfABinaryTree tree = new MinDepthOfABinaryTree();
+
         tree.root = new Node(1);
         tree.root.left = new Node(2);
         tree.root.right = new Node(3);
