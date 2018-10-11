@@ -26,5 +26,6 @@ public class TopologicalSort<T> {
 
     public Deque<Vertex<T>> topologicalSort(Graph<T> graph){
         Deque<Vertex<T>> stack = new ArrayDeque<>();
+        return stack;
     }
 }
