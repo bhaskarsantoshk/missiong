@@ -3,7 +3,7 @@ package treesandgraphs;
 public class MinDepthOfABinaryTree {
 
     Node root;
-        public int minDepthOfAbinartTree(Node root){
+        public int minDepthOfABinartTree(Node root){
             if(root==null){
                 return 0;
             }
@@ -12,9 +12,9 @@ public class MinDepthOfABinaryTree {
                 return 1;
             }
 
-                int left = minDepthOfAbinartTree(root.left);
+                int left = minDepthOfABinartTree(root.left);
 
-                int right = minDepthOfAbinartTree(root.right);
+                int right = minDepthOfABinartTree(root.right);
 
             return Math.min(left,right)+1;
         }
@@ -30,6 +30,6 @@ public class MinDepthOfABinaryTree {
         tree.root.left.right = new Node(5);
 
         System.out.println("The minimum depth of "+
-                "binary tree is : " + tree.minDepthOfAbinartTree(tree.root));
+                "binary tree is : " + tree.minDepthOfABinartTree(tree.root));
     }
 }
