@@ -7,8 +7,6 @@ public class Solution {
     static HashMap<RepairVehicle, Technician> resourceList = new HashMap<>();
     public static void main(String[] args) {
 
-
-
         Vehicle v1 = new MotorCycle();
         Technician T001 = new Technician(Skills.repairBrake, v1);
         RepairVehicle obj1 = new RepairVehicle(Skills.repairBrake, v1);
@@ -39,7 +37,6 @@ public class Solution {
         RepairVehicle obj6 = new RepairVehicle(Skills.repairTyre, v6);
         resourceList.put(obj6, T006);
 
-
         Vehicle v7 = new Bus();
         Technician T007 = new Technician(Skills.repairBrake, v7);
         RepairVehicle obj7 = new RepairVehicle(Skills.repairBrake, v7);
@@ -55,16 +52,10 @@ public class Solution {
         RepairVehicle obj9 = new RepairVehicle(Skills.repairEngine, v9);
         resourceList.put(obj9, T009);
 
-        //System.out.println(resourceList);
-
         Skills[] repair={Skills.repairEngine, Skills.repairEngine};
         System.out.println(allotTech(v1,repair));
 
-
-
-
     }
-
     public static List<Technician> allotTech(Vehicle vehicle, Skills[] repair){
         List<Technician> techs = new ArrayList<>();
         for(int i = 0; i < repair.length; i++) {
