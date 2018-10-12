@@ -5,7 +5,6 @@ public class MaxSumSubsequenceNonadjacentElements {
         int[] v1 = new int[]{1, 6, 10, 14, 50, -20, -5, -10};
         System.out.println("Max non adjacent sum: " + find_max_sum_nonadjacent(v1));
     }
-
     static int find_max_sum_nonadjacent(int[] a) {
         //TODO: Write - Your - Code
         int result[] = new int[a.length];
