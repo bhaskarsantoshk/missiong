@@ -13,7 +13,6 @@ public class Node {
     public Node(){
 
     }
-
     void appendToTail(int d){
         Node end= new Node(d);
         Node n=this;
