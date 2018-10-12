@@ -11,7 +11,6 @@ import java.util.*;
 // CLASS BEGINS, THIS CLASS IS REQUIRED
 public class Solution
 {
-
     List<List<Integer>> nearestXsteakHouses(int totalSteakhouses,
                                             List<List<Integer>> allLocations,
                                             int numSteakhouses)
@@ -19,7 +18,6 @@ public class Solution
         if ( totalSteakhouses == numSteakhouses){
             return allLocations;
         }
-
         else if (numSteakhouses == 0){
             return null;
         }
