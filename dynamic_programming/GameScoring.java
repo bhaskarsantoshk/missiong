@@ -6,7 +6,6 @@ public class GameScoring {
 
         System.out.println( "Scoring_Options_Dp(5): "+ scoring_options_dp(5)); //10
     }
-
     public static int scoring_options_dp(int n) {
         //TODO: Write - Your - Code
         int result[] = new int[n+1];
@@ -14,7 +13,6 @@ public class GameScoring {
         result[2] = 2;
         result[3] = 3;
         result[4] = 6;
-
         if (n<=4){
             return result[n];
         }
@@ -23,7 +21,6 @@ public class GameScoring {
                 result[i]= result[i-4] + result[i-2] + result[i-1];
             }
         }
-
         return result[n];
     }
 }
