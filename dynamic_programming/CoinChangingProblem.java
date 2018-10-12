@@ -6,7 +6,6 @@ public class CoinChangingProblem {
         int[] denominations = new int[] {1, 5, 10};
         System.out.println("Combinations (DP): " + solve_coin_change_dp(denominations,356));
     }
-
     static int solve_coin_change_dp(
             int[] denominations,
             int amount) {
