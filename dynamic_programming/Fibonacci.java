@@ -8,7 +8,6 @@ public class Fibonacci {
         System.out.println("get_fib(5) = "+ get_fibonacci(9)); // 34
     }
     //Recursive
-
     static int get_fibonacci_rec(int n) {
         //TODO: Write - Your - Code
         if(n==0 || n==1){
@@ -17,7 +16,6 @@ public class Fibonacci {
 
         return get_fibonacci_rec(n-1) +  get_fibonacci_rec(n-2);
     }
-
     static int get_fibonacci(int n) {
         //TODO: Write - Your - Code
         if (n== 1 || n==0){
@@ -25,14 +23,11 @@ public class Fibonacci {
         }
         int first = 0;
         int second = 1;
-
         for(int i = 2; i <= n; i++){
             int temp = second;
             second = first+second;
             first= temp;
         }
-
         return second;
     }
-
 }
