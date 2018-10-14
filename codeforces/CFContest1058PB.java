@@ -6,11 +6,9 @@ public class CFContest1058PB {
         Scanner in = new Scanner(System.in);
         int n=in.nextInt();
         int d=in.nextInt();
-
         Point polygon1[] = { new Point(0, d), new Point(d, 0),
                 new Point(n, n-d), new Point(n-d, n) };
         int m=in.nextInt();
-
         while(m!=0){
             int x=in.nextInt();
             int y=in.nextInt();
@@ -19,9 +17,7 @@ public class CFContest1058PB {
             System.out.println(isInside(polygon1,4,p)?"YES":"NO");
             m--;
         }
-
     }
-
     public static boolean onSegment(Point p, Point q, Point r)
     {
         if (q.x <= Math.max(p.x, r.x) && q.x >= Math.min(p.x, r.x)
@@ -29,7 +25,6 @@ public class CFContest1058PB {
             return true;
         return false;
     }
-
     public static int orientation(Point p, Point q, Point r)
     {
         int val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
@@ -38,30 +33,22 @@ public class CFContest1058PB {
             return 0;
         return (val > 0) ? 1 : 2;
     }
-
     public static boolean doIntersect(Point p1, Point q1, Point p2, Point q2)
     {
-
         int o1 = orientation(p1, q1, p2);
         int o2 = orientation(p1, q1, q2);
         int o3 = orientation(p2, q2, p1);
         int o4 = orientation(p2, q2, q1);
-
         if (o1 != o2 && o3 != o4)
             return true;
-
         if (o1 == 0 && onSegment(p1, p2, q1))
             return true;
-
         if (o2 == 0 && onSegment(p1, q2, q1))
             return true;
-
         if (o3 == 0 && onSegment(p2, p1, q2))
             return true;
-
         if (o4 == 0 && onSegment(p2, q1, q2))
             return true;
-
         return false;
     }
 
