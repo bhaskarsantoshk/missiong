@@ -13,29 +13,29 @@ import java.util.Scanner;
 
 public class KadaneAlgorithm {
 
-    public static void main(String []args){
-        Scanner in= new Scanner(System.in);
-        int t=in.nextInt();
-        while(t!=0){
-            int n = in.nextInt();
-            int a[]= new int[n];
-            for(int i = 0; i < n ; i++ ){
-                a[i] = in.nextInt();
-            }
-            maximumContigiousSum(a,n);
-            t--;
-        }
-    }
+ public static void main(String[] args) {
+  Scanner in = new Scanner(System.in);
+  int t = in .nextInt();
+  while (t != 0) {
+   int n = in .nextInt();
+   int a[] = new int[n];
+   for (int i = 0; i < n; i++) {
+    a[i] = in .nextInt();
+   }
+   maximumContigiousSum(a, n);
+   t--;
+  }
+ }
 
-    static void maximumContigiousSum(int[] a, int n){
-        int localMaxSum = a[0];
-        int globalMaxSum = a[0];
+ static void maximumContigiousSum(int[] a, int n) {
+  int localMaxSum = a[0];
+  int globalMaxSum = a[0];
 
-        for(int i = 1; i < n ; i++){
-            localMaxSum= Math.max(localMaxSum+a[i], a[i]);
-            globalMaxSum = Math.max(localMaxSum,globalMaxSum);
-        }
+  for (int i = 1; i < n; i++) {
+   localMaxSum = Math.max(localMaxSum + a[i], a[i]);
+   globalMaxSum = Math.max(localMaxSum, globalMaxSum);
+  }
 
-        System.out.println(globalMaxSum);
-    }
+  System.out.println(globalMaxSum);
+ }
 }
