@@ -1,5 +1,4 @@
 package Amazon;
-
 /*
 Given an array of integers, find a combination of four elements in the array whose sum is equal to a given value X.
 
@@ -24,12 +23,10 @@ Output:
  */
 
 import java.util.*;
-
 public class FourElements {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         int t=in.nextInt();
-
         while(t!=0){
             int n=in.nextInt();
             int a[]= new int[n];
