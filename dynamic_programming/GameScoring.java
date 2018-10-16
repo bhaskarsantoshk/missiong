@@ -7,8 +7,8 @@ public class GameScoring {
         System.out.println( "Scoring_Options_Dp(5): "+ scoring_options_dp(5)); //10
     }
     public static int scoring_options_dp(int n) {
-        //TODO: Write - Your - Code
-        int result[] = new int[n+1];
+
+int result[] = new int[n+1];
         result[1] = 1;
         result[2] = 2;
         result[3] = 3;
