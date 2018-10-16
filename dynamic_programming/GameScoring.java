@@ -2,7 +2,7 @@ package dynamic_programming;
 
 public class GameScoring {
     public static void main(String[] args) {
-        System.out.println( "Scoring_Options_Dp(4): "+ scoring_options_dp(4)); //6
+        System.out.println("Scoring_Options_Dp(4): "+ scoring_options_dp(4)); //6
 
         System.out.println( "Scoring_Options_Dp(5): "+ scoring_options_dp(5)); //10
     }
