@@ -28,7 +28,7 @@ public class SumOfTwoLargeNumbers {
 
 
 int carry = 0;
-                int i = firstArray.length - 1;
+                int i= firstArray.length - 1;
                 int j = secondArray.length - 1;
                 while (i >= 0 && j >= 0) {
                     int sum = firstArray[i] + secondArray[j] + carry;
