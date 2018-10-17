@@ -25,7 +25,7 @@ public class SumOfTwoLargeNumbers {
             }
             else {
 
-                //Sum:
+          
 
                 int carry = 0;
                 int i = firstArray.length - 1;
