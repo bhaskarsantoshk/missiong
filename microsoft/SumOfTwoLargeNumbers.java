@@ -25,9 +25,9 @@ public class SumOfTwoLargeNumbers {
             }
             else {
 
-          
 
-                int carry = 0;
+
+int carry = 0;
                 int i = firstArray.length - 1;
                 int j = secondArray.length - 1;
                 while (i >= 0 && j >= 0) {
@@ -44,13 +44,13 @@ public class SumOfTwoLargeNumbers {
                     i--;
                 }
 
-                if (carry == 1) {
+                if (carry
                     print(copyOfFirstArray);
                 } else {
                     print(firstArray);
                 }
             }
-            t--;
+           
         }
     }
 
