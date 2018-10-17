@@ -28,7 +28,7 @@ public class LoopDetection extends Node{
             if(fastPointer.next!=null){
                 fastPointer=fastPointer.next;
             }else{
-                loopend=true;
+               loopend=true;
             }
 
             if(slowPointer.equals(fastPointer) && loopend==false){
