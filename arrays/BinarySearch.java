@@ -14,8 +14,10 @@ public class BinarySearch {
    50,
    69,
    80,
-   100
+   10
+
   };
+  //
   System.out.println("Key(12) found at: " + bin_search(arr1, 12));
   System.out.println("Key(44) found at: " + bin_search(arr1, 44));
   System.out.println("Key(80) found at: " + bin_search(arr1, 80));
