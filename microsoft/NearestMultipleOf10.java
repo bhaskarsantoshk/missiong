@@ -14,7 +14,8 @@ public class NearestMultipleOf10 {
                 a[i] =Integer.parseInt(s.charAt(i)+"");
             }
 
-            if(a[a.length-1]<=5 ){
+       
+            ifif(a[a.length-1]<=5 ){
                 a[a.length-1]=0;
                 printArray(a);
             }
