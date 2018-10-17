@@ -23,7 +23,7 @@ public class SumOfTwoLargeNumbers {
             if(firstArray.length<secondArray.length){
                 print(firstArray);
             }
-            else {
+            else{
 
 
 
@@ -52,7 +52,7 @@ int carry = 0;
             }
            
         }
-    }
+   
 
     static void print(int array[]){
         for(int i=0;i<array.length;i++){
