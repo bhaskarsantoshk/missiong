@@ -31,7 +31,6 @@ public class FourElements {
             int sum=in.nextInt();
             Arrays.sort(a);
             System.out.println(isSumPossible(a,n,sum));
-
             t--;
         }
     }
