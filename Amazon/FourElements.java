@@ -8,7 +8,6 @@ Single line output, print 1 if combination is found else 0.
 Constraints:
 1<=T<=100
 1<=N<=100
-
 Example:
 Input:
 1
