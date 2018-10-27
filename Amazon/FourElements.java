@@ -34,7 +34,6 @@ public class FourElements {
             t--;
         }
     }
-
     static int isSumPossible(int[] a, int n, int sum){
 
         for(int i=0;i<n-1;i++){
