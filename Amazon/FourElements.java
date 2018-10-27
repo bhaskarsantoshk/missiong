@@ -28,6 +28,7 @@ public class FourElements {
             for(int i=0;i<n;i++){
                 a[i]=in.nextInt();
             }
+            
             int sum=in.nextInt();
             Arrays.sort(a);
             System.out.println(isSumPossible(a,n,sum));
