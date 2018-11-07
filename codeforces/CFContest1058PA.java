@@ -11,6 +11,7 @@ public class CFContest1058PA {
    n--;
   }
   String s = "EASY";
+  
   if (sum != 0) {
    s = "HARD";
   }
