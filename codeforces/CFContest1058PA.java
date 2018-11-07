@@ -11,6 +11,7 @@ public class CFContest1058PA {
   while (n != 0) {
    sum += in .nextInt();
    n--;
+   
   }
   String s = "EASY";
   
