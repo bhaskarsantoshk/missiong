@@ -10,6 +10,7 @@ public class CFContest1058PA {
   int sum = 0;
   
   while (n != 0) {
+   
    sum += in .nextInt();
    n--;
    
