@@ -8,6 +8,7 @@ public class CFContest1058PA {
   int n = in .nextInt();
   
   int sum = 0;
+  
   while (n != 0) {
    sum += in .nextInt();
    n--;
