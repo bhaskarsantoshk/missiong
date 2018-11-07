@@ -6,6 +6,7 @@ public class CFContest1058PA {
   Scanner in = new Scanner(System.in);
   
   int n = in .nextInt();
+  
   int sum = 0;
   while (n != 0) {
    sum += in .nextInt();
