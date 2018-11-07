@@ -19,6 +19,7 @@ public class CFContest1058PA {
   
   if (sum != 0) {
    s = "HARD";
+   
   }
   System.out.println(s);
  }
