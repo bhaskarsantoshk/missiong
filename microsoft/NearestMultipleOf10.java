@@ -15,7 +15,7 @@ public class NearestMultipleOf10 {
             }
 
        
-            ifif(a[a.length-1]<=5 ){
+            if(a[a.length-1]<=5 ){
                 a[a.length-1]=0;
                 printArray(a);
             }

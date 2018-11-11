@@ -1,4 +1,4 @@
-package smartinterviewsportal;
+package favoriteportal;
 
 import java.util.Scanner;
 
