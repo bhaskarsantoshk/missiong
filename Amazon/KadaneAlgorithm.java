@@ -28,7 +28,6 @@ public class KadaneAlgorithm {
  static void maximumContigiousSum(int[] a, int n) {
   int localMaxSum = a[0];
   int globalMaxSum = a[0];
-
   for (int i = 1; i < n; i++) {
    localMaxSum = Math.max(localMaxSum + a[i], a[i]);
    globalMaxSum = Math.max(localMaxSum, globalMaxSum);
