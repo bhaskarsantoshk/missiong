@@ -11,7 +11,6 @@ Print the maximum sum of the contiguous sub-array in a separate line for each te
 import java.util.Scanner;
 
 public class KadaneAlgorithm {
-
  public static void main(String[] args) {
   Scanner in = new Scanner(System.in);
   int t = in .nextInt();
