@@ -33,7 +33,6 @@ public class KadaneAlgorithm {
    localMaxSum = Math.max(localMaxSum + a[i], a[i]);
    globalMaxSum = Math.max(localMaxSum, globalMaxSum);
   }
-
   System.out.println(globalMaxSum);
  }
 }
