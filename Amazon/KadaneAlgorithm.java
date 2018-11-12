@@ -25,6 +25,7 @@ public class KadaneAlgorithm {
    t--;
   }
  }
+ 
  static void maximumContigiousSum(int[] a, int n) {
   int localMaxSum = a[0];
   int globalMaxSum = a[0];
