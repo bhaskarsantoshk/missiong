@@ -8,7 +8,6 @@ The first line of input contains an integer T denoting the number of test cases.
 Output:
 Print the maximum sum of the contiguous sub-array in a separate line for each test case.
 */
-
 import java.util.Scanner;
 
 public class KadaneAlgorithm {
