@@ -3,7 +3,7 @@ package com.ctci.arraysandstrings;
 public class PalindromePermutation {
 
     public static void main(String [] args){
-        String s="tact coa";
+        String s = "tact coa";
         System.out.println(isPalindrome(s));
     }
 
