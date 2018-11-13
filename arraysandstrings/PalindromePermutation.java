@@ -25,7 +25,7 @@ public class PalindromePermutation {
                 count++;
             }
         }
-        if(count==26 || count==25){
+        if( count==26 || count==25 ){
             return true;
         }
         return false;
