@@ -14,7 +14,6 @@ public class HeightOfABinaryTree {
 
         int left = height ( root.left ) + 1 ;
         int right = height ( root.right ) + 1;
-
         return Math.max ( left, right );
     }
 
