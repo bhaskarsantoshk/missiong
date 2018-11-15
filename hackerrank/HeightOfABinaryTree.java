@@ -18,7 +18,6 @@ public class HeightOfABinaryTree {
         return Math.max ( left, right );
     }
 
-
     class Node {
         Node left;
         Node right;
