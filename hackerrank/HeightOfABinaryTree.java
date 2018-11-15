@@ -18,7 +18,7 @@ public class HeightOfABinaryTree {
         Node right;
         int data;
 
-        Node(int data) {
+        Node( int data ) {
             this.data = data;
             left = null;
             right = null;
