@@ -1,7 +1,6 @@
 package missiong.hackerrank;
 
 public class HeightOfABinaryTree {
-
     public static int height(Node root) {
         if( root == null ){
             return 0;
