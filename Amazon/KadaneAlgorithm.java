@@ -9,10 +9,8 @@ Output:
 Print the maximum sum of the contiguous sub-array in a separate line for each test case.
 */
 import java.util.Scanner;
-
 public class KadaneAlgorithm {
  public static void main(String[] args) {
-  
   Scanner in = new Scanner(System.in);
   int t = in .nextInt();
   while (t != 0) {
@@ -25,7 +23,6 @@ public class KadaneAlgorithm {
    t--;
   }
  }
- 
  static void maximumContigiousSum(int[] a, int n) {
   int localMaxSum = a[0];
   int globalMaxSum = a[0];
