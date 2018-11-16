@@ -1,11 +1,7 @@
 package favoriteportal;
-
 import java.util.Scanner;
-
 public class Fibonacci {
-
     private final long[][][] exponents;
-
     public Fibonacci(){
         exponents = new long[64][2][2];
         exponents[0]=new long[][]{{1,1},{1,0}};
