@@ -36,7 +36,6 @@ public class FourElements {
         }
     }
     static int isSumPossible(int[] a, int n, int sum){
-
         for(int i=0;i<n-1;i++){
             for(int j=i+1;j<n;j++){
                 int minIndex = j+1;
