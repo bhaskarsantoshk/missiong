@@ -1,10 +1,6 @@
 package random;
 
 
-// IMPORT LIBRARY PACKAGES NEEDED BY YOUR PROGRAM
-// SOME CLASSES WITHIN A PACKAGE MAY BE RESTRICTED
-// DEFINE ANY CLASS AND METHOD NEEDED
-import javafx.print.Collation;
 
 import java.util.Collections;
 import java.util.*;
