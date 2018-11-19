@@ -26,8 +26,6 @@ public class ImplementDeQue {
         while (t!=0){
             String s= in.nextLine();
             String str[] = s.split(" ");
-            //System.out.println("Linked List before "+s+" : ");
-            //printLinkedList(head);
             if(str[0].equals("push_front")){
                 pushFront(Integer.parseInt(str[1]));
             }
@@ -40,8 +38,6 @@ public class ImplementDeQue {
             else if(str[0].equals("pop_back")){
                 popBack();
             }
-            // System.out.println("Linked List after "+s+" : ");
-            // printLinkedList(head);
             t--;
         }
     }
@@ -105,14 +101,11 @@ public class ImplementDeQue {
     }
 
     public static void printLinkedList(Node head){
-        // System.out.println("---------------------");
         Node temp = head;
         while(temp!=null){
             System.out.print(temp.data+" --> ");
             temp = temp.next;
         }
         System.out.println();
-        //System.out.println("----------------------");
-
     }
 }
