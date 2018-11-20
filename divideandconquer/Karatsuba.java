@@ -29,9 +29,7 @@ public class Karatsuba {
         BigInteger b= new BigInteger(s2);
         BigInteger c= a.multiply(b);
         BigInteger d= karatsuba(a,b);
-
         System.out.println(d);
-
         System.out.println((c.equals(d)));
     }
 }
