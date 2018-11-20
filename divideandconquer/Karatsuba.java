@@ -14,12 +14,10 @@ public class Karatsuba {
         BigInteger a = x.subtract(b.shiftLeft(N));
         BigInteger d = y.shiftRight(N);
         BigInteger c = y.subtract(d.shiftLeft(N));
-
         // compute sub-expressions
         BigInteger ac    = karatsuba(a, c);
         BigInteger bd    = karatsuba(b, d);
         BigInteger abcd  = karatsuba(a.add(b), c.add(d));
-
         return ac.add(abcd.subtract(ac).subtract(bd).shiftLeft(N)).add(bd.shiftLeft(2*N));
     }
 
