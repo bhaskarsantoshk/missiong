@@ -22,7 +22,6 @@ public class Karatsuba {
     }
 
     public static void main(String[] args) {
-
         Scanner input= new Scanner(System.in);
         String s1= input.nextLine();
         String s2=input.nextLine();
