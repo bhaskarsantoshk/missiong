@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Karatsuba {
     private final static BigInteger ZERO = new BigInteger("0");
-
     public static BigInteger karatsuba(BigInteger x, BigInteger y){
         int N= Math.max(x.bitLength(),y.bitLength());
         if(N<=2000 ){
