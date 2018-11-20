@@ -25,10 +25,8 @@ public class Karatsuba {
         Scanner input= new Scanner(System.in);
         String s1= input.nextLine();
         String s2=input.nextLine();
-
         BigInteger a= new BigInteger(s1);
         BigInteger b= new BigInteger(s2);
-
         BigInteger c= a.multiply(b);
         BigInteger d= karatsuba(a,b);
 
