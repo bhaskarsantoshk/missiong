@@ -9,7 +9,6 @@ public class Karatsuba {
         if(N<=2000 ){
             return x.multiply(y);
         }
-
         N= N/2 + (N%2);
         BigInteger b = x.shiftRight(N);
         BigInteger a = x.subtract(b.shiftLeft(N));
