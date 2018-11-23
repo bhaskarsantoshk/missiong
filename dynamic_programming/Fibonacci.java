@@ -15,7 +15,6 @@ public class Fibonacci {
         return get_fibonacci_rec(n-1) +  get_fibonacci_rec(n-2);
     }
     static int get_fibonacci(int n) {
-        //TODO: Write - Your - Code
         if (n== 1 || n==0){
             return n;
         }
