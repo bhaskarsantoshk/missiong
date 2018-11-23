@@ -1,5 +1,4 @@
 package dynamic_programming;
-
 public class Fibonacci {
     public static void main(String[] args) {
         System.out.println("get_fib(5) = "+ get_fibonacci_rec(5)); // 5
