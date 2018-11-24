@@ -1,4 +1,4 @@
-package dynamic_programming;
+package missiong.dynamic_programming;
 
 public class CoinChangingProblem {
     public static void main(String[] args) {
