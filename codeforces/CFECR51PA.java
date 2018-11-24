@@ -5,7 +5,6 @@ public class CFECR51PA {
  public static void main(String[] args) {
   Scanner in = new Scanner(System.in);
   int t = in .nextInt(); in .nextLine();
-
   while (t != 0) {
    String s = in .nextLine();
    String res = modifiedString(s);
@@ -23,7 +22,6 @@ public class CFECR51PA {
   int digitCount = 0;
   int lowerCaseCount = 0;
   int upperCaseCount = 0;
-
   for (int i = 0; i < s.length(); i++) {
    if (s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
     lowerCaseCount++;
@@ -48,7 +46,6 @@ public class CFECR51PA {
    res = modifyString(s, lowerCaseCount, upperCaseCount, digitCount);
   }
   return res;
-
  }
 
  public static boolean isValid(String s) {
@@ -62,7 +59,6 @@ public class CFECR51PA {
     set.add('1');
    }
   }
-
   if (set.size() == 3) {
    return true;
   } else {
