@@ -1,5 +1,4 @@
 package dynamic_programming;
-
 public class Fibonacci {
     public static void main(String[] args) {
         System.out.println("get_fib(5) = "+ get_fibonacci_rec(5)); // 5
@@ -9,15 +8,12 @@ public class Fibonacci {
     }
     //Recursive
     static int get_fibonacci_rec(int n) {
-        //TODO: Write - Your - Code
         if(n==0 || n==1){
             return n;
         }
-
         return get_fibonacci_rec(n-1) +  get_fibonacci_rec(n-2);
     }
     static int get_fibonacci(int n) {
-        //TODO: Write - Your - Code
         if (n== 1 || n==0){
             return n;
         }
