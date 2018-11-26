@@ -10,7 +10,6 @@ public class BinarySearch {
  static int binSearch(int[] a, int key) {
   int l= 0;
   int r = a.length-1;
-
   while (l<=r){
    int mid = l + (r-l)/2;
    if (a[mid]== key){
