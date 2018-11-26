@@ -14,8 +14,6 @@ public class Interleavings {
 
             Interleavings obj= new Interleavings();
             obj.printInterleavings(str[0], str[1]);
-
-
             t--;
         }
     }
