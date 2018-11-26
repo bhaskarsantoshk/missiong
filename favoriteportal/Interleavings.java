@@ -11,7 +11,6 @@ public class Interleavings {
             String s= in.nextLine();
 
             String[] str= s.split(" ");
-
             Interleavings obj= new Interleavings();
             obj.printInterleavings(str[0], str[1]);
             t--;
