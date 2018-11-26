@@ -11,6 +11,7 @@ public class LeftRotationOfArrayByK {
     }
     @Contract(value = "_, _ -> param1", pure = true)
     static int[] leftRotateByK(int[] a, int k){
+
         // 1 2 3 4 5
         // 5 1 2 3 4
         // 4 5 1 2 3
