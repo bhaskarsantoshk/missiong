@@ -1,11 +1,10 @@
-package com.ctci.arraysandstrings;
+package missiong.arraysandstrings;
 
 public class CheckPermutation {
 
     public static void main(String []args){
         String s1="GoogleFacebookMicroSoft";
         String s2="FacebookMicroSoftGoogle";
-
         System.out.println(checkPermutation(s1,s2));
     }
 
