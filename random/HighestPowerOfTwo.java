@@ -8,6 +8,7 @@ public class HighestPowerOfTwo {
         System.out.println(highestPowerOfTwo(1024));
     }
     static int highestPowerOfTwo(int n){
+
         if (n<=0){
             return 0;
         }
