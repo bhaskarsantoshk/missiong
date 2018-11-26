@@ -1,4 +1,4 @@
-package leetcode;
+package missiong.leetcode;
 
 public class P700SearchInABinarySearchTree {
     public TreeNode searchBST(TreeNode root, int val) {
