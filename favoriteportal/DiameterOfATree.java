@@ -36,7 +36,6 @@ public class DiameterOfATree {
         return Math.max ( left , right) + 1 ;
     }
 
-
     public static TreeNode insert(TreeNode root, int val){
         if (root == null ){
             root = new TreeNode(val);
