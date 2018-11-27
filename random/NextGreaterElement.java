@@ -7,13 +7,10 @@ public class NextGreaterElement {
         int a[]= {1,2,3,4,5};
         int b[]= {5,4,3,2,1};
         int c[]= {2,3,1,4,5};
-
         nextGreaterElements(a);
         nextGreaterElements(b);
         nextGreaterElements(c);
-
     }
-
     private static void nextGreaterElements(int[] a) {
         Stack<Integer> stack = new Stack<Integer>();
         stack.add(a[0]);
