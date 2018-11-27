@@ -18,10 +18,18 @@ public class NextGreaterElement {
         Stack<Integer> stack = new Stack<Integer>();
         stack.add(a[0]);
         for(int i=1;i<a.length;i++){
-            while(stack.isEmpty() || stack.peek()<=a[i]){
-                
+            if(a[i] > stack.peek()){
+                System.out.print(a[i]+" ");
+                stack.pop();
+                stack.push(a[i]);
+            }
+            else {
+                while (stack.isEmpty() || stack.peek() <= a[i]) {
+                    stack.push(a[i]);
+                }
             }
         }
+        System.out.println();
 
     }
 }
