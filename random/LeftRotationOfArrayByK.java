@@ -23,13 +23,11 @@ public class LeftRotationOfArrayByK {
             swap(a,i,r-i);
         }
     }
-
     private static void swap(int[] a, int i, int j) {
         int temp= a[i];
         a[i] = a[j];
         a[j] = temp;
     }
-
     static void printArray(@NotNull int[] a){
         for (int i=0;i<a.length;i++){
             System.out.print(a[i]+" ");
