@@ -1,5 +1,7 @@
 package missiong.random;
 
+import java.util.Stack;
+
 public class NextGreaterElement {
     public static void main(String[] args){
         int a[]= {1,2,3,4,5};
@@ -13,6 +15,13 @@ public class NextGreaterElement {
     }
 
     private static void nextGreaterElements(int[] a) {
-        
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.add(a[0]);
+        for(int i=1;i<a.length;i++){
+            while(stack.isEmpty() || stack.peek()<=a[i]){
+                
+            }
+        }
+
     }
 }
