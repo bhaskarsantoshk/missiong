@@ -8,9 +8,9 @@ public class NextGreaterElement {
         int b[]= {5,4,3,2,1};
         int c[]= {2,3,1,4,5};
         int d[]= {5,2,3,4,5,5,2,3,4,5,5,2,3,4,5,5,2,3,4,5,5,2,3,4,5,5,2,3,4,5};
-//        nextGreaterElements(a);
-//        nextGreaterElements(b);
-//        nextGreaterElements(c);
+        nextGreaterElements(a);
+        nextGreaterElements(b);
+        nextGreaterElements(c);
         nextGreaterElements(d);
     }
     private static void nextGreaterElements(int[] a) {
