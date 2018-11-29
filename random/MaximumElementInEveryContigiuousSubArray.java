@@ -9,7 +9,6 @@ public class MaximumElementInEveryContigiuousSubArray {
         int k= 3;
         printMaxInEverySubArray(a,k);
     }
-
     private static void printMaxInEverySubArray(int[] a, int k) {
         Deque<Integer> dq = new LinkedList<>();
         int i=0;
