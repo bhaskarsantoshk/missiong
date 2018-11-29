@@ -16,6 +16,7 @@ public class MaximumElementInEveryContigiuousSubArray {
         // I will remove elements that are less than the current element since they are not required for this as well as next window
         //I will add the elements that are less than the last element
         for(i=0; i<k;i++){
+            
             while (dq.isEmpty() == false && a[i] >= a[dq.peekLast()]){
                 dq.removeLast();
             }
