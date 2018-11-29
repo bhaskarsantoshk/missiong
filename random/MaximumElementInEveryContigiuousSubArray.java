@@ -30,7 +30,6 @@ public class MaximumElementInEveryContigiuousSubArray {
             while (dq.isEmpty() == false && dq.peekFirst() <= i - k) {
                 dq.removeFirst();
             }
-
             //Now again I will remove Dequeue elements from last if there comes new number that is greater
             //
             while (dq.isEmpty() == false && a[i] >= a[dq.peekLast()]) {
