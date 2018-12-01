@@ -10,7 +10,6 @@ public class ReverseAStackUsingRecursion {
         reverseAStack();
         System.out.println(stack);
     }
-
     private static void reverseAStack() {
         if(!stack.isEmpty()){
             int x = stack.pop();
@@ -18,7 +17,6 @@ public class ReverseAStackUsingRecursion {
             pushToStack(x);
         }
     }
-
     private static void pushToStack(int x) {
         if(stack.isEmpty()){
             stack.push(x);
@@ -29,7 +27,6 @@ public class ReverseAStackUsingRecursion {
             stack.push(y);
         }
     }
-
     private static void createAStack(Stack<Integer> stack) {
         stack.push(5);
         stack.push(4);
@@ -38,6 +35,4 @@ public class ReverseAStackUsingRecursion {
         stack.push(1);
         stack.push(0);
     }
-
-    //reverse a Stack
 }
