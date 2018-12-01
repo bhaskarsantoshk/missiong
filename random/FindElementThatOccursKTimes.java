@@ -8,7 +8,6 @@ public class FindElementThatOccursKTimes {
         int k= 2;
         System.out.println(elementThatOccursKTimes(a,k));
     }
-
     private static int elementThatOccursKTimes(int[] a, int k) {
         HashMap<Integer, Integer> hm = new HashMap<>();
         for (int i = 0; i < a.length; i++) {
@@ -20,7 +19,6 @@ public class FindElementThatOccursKTimes {
             if (hm.get(a[i]) == k) {
                 return a[i];
             }
-
         }
         return -1;
     }
