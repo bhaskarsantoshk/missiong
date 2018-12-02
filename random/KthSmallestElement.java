@@ -29,7 +29,7 @@ public class KthSmallestElement {
         int pivot = arr[high];
         int index = low;
 
-        for (int j= index; j<= high; j++){
+        for (int j= low; j<= high-1; j++){
             if(arr[j] <= pivot){
                 swap(arr, index, j);
                 index++;
