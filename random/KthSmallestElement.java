@@ -22,7 +22,7 @@ public class KthSmallestElement {
             }
         }
 
-        return -1;
+        return 100000;
     }
 
     private static int partitionIndex(Integer[] arr, int low, int high) {
@@ -32,8 +32,13 @@ public class KthSmallestElement {
         for (int j= index; j<= high; j++){
             if(arr[j] <= pivot){
                 swap(arr, index, j);
+                index++;
             }
         }
+
+        swap(arr,index, high);
+
+        return index;
     }
 
     private static void swap(Integer[] arr, int index, int j) {
