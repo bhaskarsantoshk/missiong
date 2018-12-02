@@ -1,7 +1,5 @@
 package missiong.random;
-
 import java.util.HashMap;
-
 public class FindElementThatOccursKTimes {
     public static void main(String[] args){
         int a[]={1, 7, 4, 3, 4, 8, 7};
@@ -16,6 +14,8 @@ public class FindElementThatOccursKTimes {
             } else {
                 hm.put(a[i], 1);
             }
+        }
+        for (int i = 0; i < a.length; i++) {
             if (hm.get(a[i]) == k) {
                 return a[i];
             }
