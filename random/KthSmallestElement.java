@@ -28,16 +28,13 @@ public class KthSmallestElement {
     private static int partitionIndex(Integer[] arr, int low, int high) {
         int pivot = arr[high];
         int index = low;
-
         for (int j= low; j<= high-1; j++){
             if(arr[j] <= pivot){
                 swap(arr, index, j);
                 index++;
             }
         }
-
         swap(arr,index, high);
-
         return index;
     }
 
