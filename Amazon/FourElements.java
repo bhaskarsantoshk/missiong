@@ -17,6 +17,7 @@ Input:
 Output:
 1
  */
+
 import java.util.*;
 public class FourElements {
     public static void main(String[] args){
