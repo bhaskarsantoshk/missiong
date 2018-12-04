@@ -1,6 +1,28 @@
 package missiong.favoriteportal;
 
+import java.util.Scanner;
+
 public class LeftViewOfABinaryTree {
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int t= in.nextInt();
+        while (t!=0){
+            int n = in.nextInt();
+            TreeNode root = null;
+            max = 1;
+            while (n!=0){
+                int val = in.nextInt();
+                root = insert(root, val);
+                n--;
+            }
+            leftViewOfATree(root);
+            t--;
+        }
+    }
+
+    private static void leftViewOfATree(TreeNode root) {
+    }
+
     public static TreeNode insert(TreeNode root, int val){
         if (root == null ){
             root = new TreeNode(val);
