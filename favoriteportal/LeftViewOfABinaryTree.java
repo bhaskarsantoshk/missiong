@@ -22,7 +22,7 @@ public class LeftViewOfABinaryTree {
         }
     }
     private static void leftViewOfATree(TreeNode root) {
-
+        
     }
     public static TreeNode insert(TreeNode root, int val){
         if (root == null ){
