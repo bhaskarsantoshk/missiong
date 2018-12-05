@@ -18,12 +18,26 @@ public class LeftViewOfABinaryTree {
                 n--;
             }
             leftViewOfATree(root);
+            System.out.println();
             t--;
         }
     }
     private static void leftViewOfATree(TreeNode root) {
-        
+        printLeftView(root,1);
     }
+
+    private static void printLeftView(TreeNode root, int level) {
+        if(root == null){
+            return;
+        }
+        if(max_level<level){
+            System.out.print(root.data+" ");
+            max_level = level;
+        }
+        printLeftView(root.left, level+1);
+        printLeftView(root.right,level+1);
+    }
+
     public static TreeNode insert(TreeNode root, int val){
         if (root == null ){
             root = new TreeNode(val);
