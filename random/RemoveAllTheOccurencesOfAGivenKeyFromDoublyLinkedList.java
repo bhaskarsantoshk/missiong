@@ -24,7 +24,6 @@ public class RemoveAllTheOccurencesOfAGivenKeyFromDoublyLinkedList {
         head.next.next.next.next.next.next.next = new LinkedListNode(2);
         head.next.next.next.next.next.next.next.prev = head.next.next.next.next.next.next;
         LinkedListNode temp = head;
-
     }
 
     static class LinkedListNode{
