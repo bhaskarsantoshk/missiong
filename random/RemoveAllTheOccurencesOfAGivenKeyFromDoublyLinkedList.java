@@ -3,10 +3,42 @@ package missiong.random;
 public class RemoveAllTheOccurencesOfAGivenKeyFromDoublyLinkedList {
     static LinkedListNode head = null;
     public static void main(String[] args){
-        constructLinkedList(head);
+        constructLinkedList();
+        printLinkedList(head);
+        deleteAllOccurences(head, 2);
     }
 
-    private static void constructLinkedList(LinkedListNode head) {
+    private static void deleteAllOccurences(LinkedListNode head, int key) {
+        if(head == null){
+            return;
+        }
+
+        LinkedListNode cur = head;
+        LinkedListNode next = null;
+
+        while (cur != null){
+            //if(cur.data == )
+        }
+    }
+
+    private static void printLinkedList(LinkedListNode head) {
+        System.out.println("Forward :");
+        LinkedListNode temp = head;
+        LinkedListNode lastNode = head;
+        while (temp!=null){
+            System.out.print(temp.data+" ");
+            temp = temp.next;
+            lastNode = temp;
+        }
+        System.out.println();
+        System.out.println("Reverse :");
+        while(lastNode!=null){
+            System.out.print(lastNode.data+" ");
+            lastNode = lastNode.prev;
+        }
+    }
+
+    private static void constructLinkedList() {
         head = new LinkedListNode(2);
         head.prev = null;
         head.next = new LinkedListNode(2);
