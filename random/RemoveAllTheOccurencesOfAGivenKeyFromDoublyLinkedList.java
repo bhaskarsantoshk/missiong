@@ -14,7 +14,7 @@ public class RemoveAllTheOccurencesOfAGivenKeyFromDoublyLinkedList {
         LinkedListNode cur = head;
         LinkedListNode next = null;
         while (cur != null){
-            //if(cur.data == )
+            
         }
     }
     private static void printLinkedList(LinkedListNode head) {
