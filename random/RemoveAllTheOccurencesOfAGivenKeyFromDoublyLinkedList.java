@@ -33,7 +33,6 @@ public class RemoveAllTheOccurencesOfAGivenKeyFromDoublyLinkedList {
             lastNode = lastNode.prev;
         }
     }
-
     private static void constructLinkedList() {
         head = new LinkedListNode(2);
         head.prev = null;
