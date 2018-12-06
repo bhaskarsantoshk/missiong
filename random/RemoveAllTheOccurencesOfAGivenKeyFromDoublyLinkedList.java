@@ -7,7 +7,6 @@ public class RemoveAllTheOccurencesOfAGivenKeyFromDoublyLinkedList {
         printLinkedList(head);
         deleteAllOccurences(head, 2);
     }
-
     private static void deleteAllOccurences(LinkedListNode head, int key) {
         if(head == null){
             return;
