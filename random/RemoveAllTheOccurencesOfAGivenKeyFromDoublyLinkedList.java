@@ -18,7 +18,6 @@ public class RemoveAllTheOccurencesOfAGivenKeyFromDoublyLinkedList {
             //if(cur.data == )
         }
     }
-
     private static void printLinkedList(LinkedListNode head) {
         System.out.println("Forward :");
         LinkedListNode temp = head;
