@@ -4,27 +4,54 @@ public class RemoveAllTheOccurencesOfAGivenKeyFromDoublyLinkedList {
     static LinkedListNode head = null;
     public static void main(String[] args){
         constructLinkedList();
-        printLinkedList(head);
+        //printLinkedList(head);
         deleteAllOccurences(head, 2);
+       // printLinkedList(head);
     }
     private static void deleteAllOccurences(LinkedListNode head, int key) {
         if(head == null){
             return;
         }
         LinkedListNode cur = head;
-        LinkedListNode next = null;
-        while (cur != null){
-
+        LinkedListNode next;
+        while (cur!= null){
+            //System.out.print(cur.data+" ");
+            if(cur.data == key){
+                next = cur.next;
+                deleteNode (head , cur);
+                cur = next;
+            }
+            else{
+                cur = cur.next;
+            }
         }
     }
+
+    private static void deleteNode(LinkedListNode head, LinkedListNode cur) {
+        if(head == null || cur== null){
+            return;
+        }
+        if(head == cur){
+            head = cur.next;
+        }
+        if(cur.next!=null){
+            cur.next.prev = cur.prev;
+        }
+        if(cur.prev !=null){
+            cur.prev.next = cur.next;
+        }
+
+        cur = null;
+    }
+
     private static void printLinkedList(LinkedListNode head) {
         System.out.println("Forward :");
         LinkedListNode temp = head;
         LinkedListNode lastNode = head;
         while (temp!=null){
             System.out.print(temp.data+" ");
-            temp = temp.next;
             lastNode = temp;
+            temp = temp.next;
         }
         System.out.println();
         System.out.println("Reverse :");
