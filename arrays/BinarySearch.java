@@ -6,7 +6,7 @@ public class BinarySearch {
   System.out.println("Key(44) found at: "+binSearch(arr1,44));
   System.out.println("Key(80) found at: "+binSearch(arr1,80));
  }
- 
+
  
  
 
