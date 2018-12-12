@@ -11,6 +11,7 @@ public class BinarySearch {
  
  
  
+ 
 
  static int binSearch(int[] a, int key) {
   int l= 0;
