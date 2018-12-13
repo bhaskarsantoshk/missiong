@@ -24,7 +24,6 @@ public class UglyNumbers {
         int multiple2 = 2;
         int multiple3 = 3;
         int multiple5 = 5;
-
         for(int i=1;i<n;i++) {
             int[] minimum = minimumValAndIndex(a, multiple2, multiple3, multiple5, i, counter2, counter3, counter5);
             if(minimum[0]==2){
