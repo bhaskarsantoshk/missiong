@@ -7,6 +7,12 @@ public class BinarySearch {
   System.out.println("Key(80) found at: "+binSearch(arr1,80));
  }
 
+ 
+ 
+ 
+ 
+ 
+
  static int binSearch(int[] a, int key) {
   int l= 0;
   int r = a.length-1;
