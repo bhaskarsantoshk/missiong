@@ -49,7 +49,6 @@ public class P21MergeTwoSortedLists {
 
         P21MergeTwoSortedLists obj = new P21MergeTwoSortedLists();
         ListNode l3= obj.mergeTwoLists(l1,l2);
-
         printLinkedList(l3);
     }
 
