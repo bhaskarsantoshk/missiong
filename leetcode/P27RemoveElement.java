@@ -13,7 +13,6 @@ public class P27RemoveElement {
                 index ++;
             }
         }
-
         return index;
     }
 }
