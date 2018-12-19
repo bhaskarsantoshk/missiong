@@ -18,8 +18,3 @@ public class P26RemoveDuplicatesFromSortedArray {
         return index+1;
     }
 }
-
-
-// 1 1 2 3 3 3 4
-// 1 2 3 4
-
