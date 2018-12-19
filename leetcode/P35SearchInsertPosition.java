@@ -16,7 +16,6 @@ public class P35SearchInsertPosition {
                 left = mid+1;
             }
         }
-
         return left;
     }
 
