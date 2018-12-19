@@ -58,13 +58,6 @@ public class P1TwoSum {
         int target = 9;
         P1TwoSum obj = new P1TwoSum();
         int result[] = obj.twoSum(nums, target);
-
-        //        if(result.length > 1) {
-        //            for (int i = 0; i < result.length; i++) {
-        //                System.out.println(result[i] + " ");
-        //            }
-        //        }
-
     }
 
 }
