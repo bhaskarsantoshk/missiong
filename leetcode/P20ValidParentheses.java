@@ -34,14 +34,11 @@ public class P20ValidParentheses {
                 }
             }
         }
-
         if(stack.isEmpty()){
             return true;
         }
-
             return false;
         }
-
         public static void main(String args[]){
             P20ValidParentheses obj= new P20ValidParentheses();
             System.out.println(obj.isValid("(())"));
