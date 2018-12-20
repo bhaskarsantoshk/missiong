@@ -11,6 +11,7 @@ public class P70ClimbingStairs {
         if( n == 2){
             return 2;
         }
+
         int a[] = new int[n+1];
         a[1] = 1;
         a[2] = 2;
