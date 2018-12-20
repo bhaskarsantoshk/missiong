@@ -10,7 +10,6 @@ public class P100SameTree {
         }
         return p.val == q.val && isSameTree(p.left , q.left) && isSameTree(p.right , q.right);
     }
-
     class TreeNode{
         int val;
         TreeNode left;
