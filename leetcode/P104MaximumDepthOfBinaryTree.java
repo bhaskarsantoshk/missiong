@@ -1,5 +1,4 @@
 package leetcode;
-
 public class P104MaximumDepthOfBinaryTree {
     public int maxDepth(TreeNode root) {
         if ( root == null ){
