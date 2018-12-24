@@ -22,6 +22,6 @@ public class P141LinkedListCycle {
         ListNode(int x){
             val=x;
         }
-        
+
     }
 }
