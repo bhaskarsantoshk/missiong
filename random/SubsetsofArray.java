@@ -22,7 +22,7 @@ class SubSetsofArray {
             a[i] = in.nextInt();
         }
         
-
+    int[] b= a;
         for (int i = 0; i < b.length; i++) {
             System.out.println(b[i]);
             for (int l = 1; l < b.length; l++) {
