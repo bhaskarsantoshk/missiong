@@ -13,10 +13,8 @@ public class MaxNonNegativeSubArray {
         int []max_range = new int[2];
         max_range[0] = -1;
         max_range[1] = -1;
-
         int current_sum = 0;
         int total_sum = 0;
-
         for (int i=0;i<A.size();i++){
             if(A.get(i)>=0){
                 if(changeFlag==true){
@@ -53,8 +51,6 @@ public class MaxNonNegativeSubArray {
         for(int i=max_range[0];i<=max_range[1];i++){
             result.add(A.get(i));
         }
-
-
         return result;
     }
 
