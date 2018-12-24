@@ -61,10 +61,12 @@ public class MaxNonNegativeSubArray {
 
     public static void main(String[] args){
         ArrayList<Integer> a= new ArrayList<>();
+        //Test Case 1
         a.add(-1);
         a.add(-1);
         a.add(-1);
         a.add(-1);
+        //Test Case 2
 //        a.add(-54961);
 //        a.add(3510);
 //        a.add(-50805);
@@ -72,6 +74,7 @@ public class MaxNonNegativeSubArray {
 //        a.add(-39096);
 //        a.add(-47421);
 //
+        //Test Case 3
 //        a.add(1);
 //        a.add(2);
 //        a.add(5);
