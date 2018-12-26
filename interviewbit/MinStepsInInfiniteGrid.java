@@ -14,7 +14,6 @@ public class MinStepsInInfiniteGrid {
             x=A.get(i);
             y=B.get(i);
         }
-
         return distance;
     }
 }
