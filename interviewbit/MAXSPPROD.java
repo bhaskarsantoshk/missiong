@@ -49,7 +49,6 @@ public class MAXSPPROD {
         }
         System.out.println();
     }
-
     public static void main(String[] args){
         MAXSPPROD obj = new MAXSPPROD();
         ArrayList<Integer> a= new ArrayList<>();
@@ -57,7 +56,6 @@ public class MAXSPPROD {
         for(int x:arr){
             a.add(x);
         }
-
         obj.maxSpecialProduct(a);
     }
 }
