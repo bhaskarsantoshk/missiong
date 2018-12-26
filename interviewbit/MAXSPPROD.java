@@ -24,7 +24,6 @@ public class MAXSPPROD {
         }
         print(l);
         r[size-1] = 0;
-
         for(int i=size-2;i>=0;i--){
             if(A.get(i+1) >=maxSoFar){
                 maxSoFar = A.get(i+1);
@@ -36,9 +35,7 @@ public class MAXSPPROD {
             }
         }
         print(r);
-
         int specialProduct= 0;
-
         for(int i=0;i<A.size();i++){
             int currentProd = ((l[i] % 1000000007)* (r[i] % 1000000007))%1000000007;
             specialProduct = Math.max(specialProduct, currentProd);
