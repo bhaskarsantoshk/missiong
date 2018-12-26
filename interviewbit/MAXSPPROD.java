@@ -43,7 +43,6 @@ public class MAXSPPROD {
         System.out.println(specialProduct);
         return specialProduct;
     }
-
     public void print(int[] a){
         for(int x:a){
             System.out.print(x+" ");
