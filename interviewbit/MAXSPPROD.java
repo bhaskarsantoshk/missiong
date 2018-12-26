@@ -11,7 +11,6 @@ public class MAXSPPROD {
         l[0] = 0;
         int maxSoFar = 0;
         int maxIndex = 0;
-
         for (int i=1;i<size;i++){
             if(A.get(i-1)>= maxSoFar){
                 maxSoFar = A.get(i-1);
