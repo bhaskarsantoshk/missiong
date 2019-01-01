@@ -6,8 +6,7 @@ import java.util.*;
 public class Solution {
     static HashMap<RepairVehicle, Technician> resourceList = new HashMap<>();
     public static void main(String[] args) {
-
-        Vehicle v1 = new MotorCycle();
+		Vehicle v1 = new MotorCycle();
         Technician T001 = new Technician(Skills.repairBrake, v1);
         RepairVehicle obj1 = new RepairVehicle(Skills.repairBrake, v1);
         resourceList.put(obj1, T001);
