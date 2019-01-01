@@ -20,9 +20,6 @@ public class ThreadStates implements Runnable {
     }
 
 
-
-
-
     public void run(){
 
         thread myThread = new thread();
