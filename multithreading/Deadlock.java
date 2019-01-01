@@ -9,6 +9,7 @@ public class Deadlock {
             );
             Thread.currentThread().join();
 
+
             System.out.println(
 "I won't let you know me" +
         "unless you start believing in me"
