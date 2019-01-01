@@ -15,6 +15,8 @@ public class FindElementThatOccursKTimes {
                 hm.put(a[i], 1);
             }
         }
+		
+		
         for (int i = 0; i < a.length; i++) {
             if (hm.get(a[i]) == k) {
                 return a[i];
