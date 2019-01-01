@@ -19,7 +19,6 @@ public class MyThread extends Thread {
             System.out.println("Sleep interrupted");
         }
     }
-
     public static void main(String[] args){
         Thread t1= new MyThread("First Thread ");
         Thread t2 = new MyThread("Second Thread");
