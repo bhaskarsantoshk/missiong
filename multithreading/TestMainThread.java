@@ -41,8 +41,6 @@ public class TestMainThread  extends  Thread{
         // starting child thread
         ct.start();
 
-
-
     }
 }
 
