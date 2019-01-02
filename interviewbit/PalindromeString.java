@@ -27,7 +27,6 @@ public class PalindromeString {
                 lastIndex--;
             }
         }
-
         return 1;
     }
 
@@ -35,8 +34,6 @@ public class PalindromeString {
         String s="race a car";
         System.out.println(isPalindrome(s));
     }
-
-
     static boolean valid(char ch){
         return numeric(ch) || alphabetic(ch);
     }
