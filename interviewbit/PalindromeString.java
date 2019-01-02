@@ -37,7 +37,6 @@ public class PalindromeString {
     static boolean valid(char ch){
         return numeric(ch) || alphabetic(ch);
     }
-
     static boolean numeric(char ch){
         return (ch>='0' && ch<='9');
     }
