@@ -17,9 +17,6 @@ public class PalindromeString {
             else{
                 char lowerFirstIndexChar = lower(first);
                 char lowerLastIndexChar = lower(last);
-
-               // System.out.println(firstIndex+" "+lowerLastIndexChar);
-
                 if(lowerFirstIndexChar != lowerLastIndexChar){
                     return 0;
                 }
