@@ -29,7 +29,6 @@ public class PalindromeString {
         }
         return 1;
     }
-
     public static void main(String[] args){
         String s="race a car";
         System.out.println(isPalindrome(s));
