@@ -8,13 +8,12 @@ public class Power {
         if(a.equals(BigInteger.ONE) || a.equals(BigInteger.ZERO)){
             return 0;
         }
-        
+
         for(int i=0;i<a.bitLength();i++){
             if(a.testBit(i)){
                 return 0;
             }
         }
-
         return a.testBit(a.bitLength()-1)?1:0;
 
     }
