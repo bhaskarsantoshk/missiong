@@ -23,11 +23,7 @@ public class LevelOrderOfTree {
 
     private static void levelOrderOfATree(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
-        ((LinkedList<TreeNode>) queue).add(root);
-        while (!queue.isEmpty()){
-            TreeNode temp= queue.poll();
-            //System.out.print();
-        }
+        
     }
 
     public static TreeNode insert(TreeNode root, int val){
