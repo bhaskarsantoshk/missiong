@@ -1,4 +1,4 @@
-package com.ctci.arraysandstrings;
+package missiong.arraysandstrings;
 
 public class PalindromePermutation {
 
