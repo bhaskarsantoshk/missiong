@@ -1,4 +1,4 @@
-package divideandconquer;
+package missiong.divideandconquer;
 import java.math.BigInteger;
 import java.util.Scanner;
 
