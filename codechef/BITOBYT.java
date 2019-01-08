@@ -1,6 +1,11 @@
-package codechef;
+package missiong.codechef;
 import java.util.HashMap;
 import java.util.Scanner;
+
+/*
+https://www.codechef.com/OCT18B/problems/BITOBYT
+
+ */
 
 public class BITOBYT {
 
@@ -11,7 +16,6 @@ public class BITOBYT {
         int j=1;
         String s= "b";
         while ( i <= 1700){
-
             i+=3;
             s="N "+Integer.toString(j);
             hm.put(i, s);
@@ -37,9 +41,7 @@ public class BITOBYT {
             if (str[0].equals("b")) result=str[1]+" 0 0 ";
             else if (str[0].equals("N")) result="0 "+str[1]+" 0 ";
             else result="0 0 "+str[1]+" ";
-
             System.out.println(result);
-
             t--;
         }
     }
