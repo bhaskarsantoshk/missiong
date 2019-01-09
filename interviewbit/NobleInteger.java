@@ -16,7 +16,7 @@ public class NobleInteger {
         }
         return -1;
     }
-    
+
     private int binarySearchLastIndex(ArrayList<Integer> a, Integer x) {
         int l = 0;
         int h = a.size() - 1;
