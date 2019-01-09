@@ -94,7 +94,7 @@ public class TreeTraversals {
                 }
             } else if (current.left == prev) {
                 if (current.right != null) {
-                    stack.push(current.right);
+                        stack.push(current.right);
                 }
             } else {
                 result.add(current.data);
