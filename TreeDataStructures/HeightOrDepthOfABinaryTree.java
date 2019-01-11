@@ -9,5 +9,5 @@ public class HeightOrDepthOfABinaryTree {
         int rightDepth = maxDepthRecursive(root.right);
         return Math.max(leftDepth, rightDepth) + 1;
     }
-    
+
 }
